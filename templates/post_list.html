@@ -1,7 +1,7 @@
 {% extends "_base.html" %}
 
 {% block content %}
-    <button><a href="{% url 'post-new' %}"><h2>Crear Post</h2></a></button>
+    <a href="{% url 'post-new' %}"><button type="submit"><h2>Crear Post</h2></button></a>
         <ul>
             {% for item in post_list %}
                 <li><a href="{% url 'post-detail' item.pk %}">{{ item.title }}</a></li>

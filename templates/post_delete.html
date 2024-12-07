@@ -1,0 +1,16 @@
+{% extends "_base.html" %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{  form.as_p }}
+        
+        <p>¿Seguro que quieres eliminar?</p>
+
+        <button type="submit">Si</button>
+
+    </form>
+
+    <a href="{% url 'post-detail' post.pk %}"><button type="submit">No</button></a>
+
+{% endblock content %}
